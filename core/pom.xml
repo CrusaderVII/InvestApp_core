@@ -33,6 +33,11 @@
 			<artifactId>data_extract</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.invest.app</groupId>
+			<artifactId>user-operator</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
