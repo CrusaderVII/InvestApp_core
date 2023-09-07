@@ -1,5 +1,7 @@
 package com.invest.app.core.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,5 +21,12 @@ public class IssuerController {
 		Issuer issuer = Operator.getIssuerNowWithPercent(secId);
 		
 		return issuer;
+	}
+	
+	@GetMapping("/last-month")
+	public List<Issuer> getIssuerForLastMonth(@RequestParam String secId) {
+		List<Issuer> issuerForLastMonth = Operator.getIssuerForLastMonth(secId);
+		
+		return issuerForLastMonth;
 	}
 }
