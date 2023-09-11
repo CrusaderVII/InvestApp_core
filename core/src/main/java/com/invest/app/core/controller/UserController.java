@@ -25,6 +25,12 @@ public class UserController {
 	public UserService service;
 	
 	@GetMapping("/")
+	public User getUserByEmailAndPassword(@RequestParam String email, @RequestParam String password) {
+		
+		return service.getUserByEmailAndPassword(email, password);
+	}
+	
+	@GetMapping("/id")
 	public User getUserById(@RequestParam Long id) {
 		
 		return service.getUserById(id);
