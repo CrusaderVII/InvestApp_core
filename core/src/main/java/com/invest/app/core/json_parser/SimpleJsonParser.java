@@ -63,4 +63,20 @@ public class SimpleJsonParser {
 		
 		return issuers;
 	}
+	
+	public static List<IssuerMetadata> getMainIssuersMetadata(JsonNode jsonNode) {
+		List<IssuerMetadata> metadata = new ArrayList<>();
+		
+		jsonNode.iterator()
+			.forEachRemaining(innerNode -> 
+					{
+						try {
+							metadata.add(mapper.treeToValue(innerNode, IssuerMetadata.class));
+						} catch (JsonProcessingException | IllegalArgumentException e) {
+							e.printStackTrace();
+						}
+					});
+		
+		return metadata;
+	}
 }

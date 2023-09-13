@@ -1,9 +1,15 @@
 package com.invest.app.core.repository;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 import com.invest.app.core.json_parser.SimpleJsonParser;
 import com.invest.app.data_extract.entities.Issuer;
@@ -49,6 +55,37 @@ public class Operator {
 		}
 		
 		return issuers;
+	}
+	
+	public static List<Issuer> getMainIssuersNow() {
+		List<IssuerMetadata> metadata;
+		Resource issuers = new ClassPathResource("static/Main_issuers.txt"); 
+		File file = null;
+		try {
+			file = issuers.getFile();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new FileReader(file));
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+		
+		String jsonString = readJson(br);
+		
+		try {
+			metadata = SimpleJsonParser.getMainIssuersMetadata(SimpleJsonParser.parse(jsonString));
+		} catch (IOException e) {
+			metadata = null;
+			e.printStackTrace();
+		}
+		
+		return metadata.stream()
+				.map(issuerMetadata -> com.invest.app.data_extract.repository.Operator.getIssuerNowWithPercent(issuerMetadata.getSecId()))
+				.toList();
 	}
 	
 	private static String readJson(BufferedReader br) {
