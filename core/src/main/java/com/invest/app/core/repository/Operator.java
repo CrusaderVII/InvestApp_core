@@ -49,9 +49,7 @@ public class Operator {
 		try {
 			issuers = SimpleJsonParser.getIssuersOnCertainLevelNow(SimpleJsonParser.parse(jsonString));
 		} catch (IOException e) {
-			issuers = null;
-			System.out.println("lol");
-			//e.printStackTrace();
+			issuers = null;			//e.printStackTrace();
 		}
 		
 		return issuers;

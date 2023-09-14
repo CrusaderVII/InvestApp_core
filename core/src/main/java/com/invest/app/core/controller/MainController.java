@@ -18,9 +18,7 @@ public class MainController {
 	
 	@GetMapping("/stock")
 	public List<Issuer> allIssuers() {
-		List<Issuer> issuers = Operator.getIssuersOnCertainLevelNow(1);
-		
-		Operator.getIssuersOnCertainLevelNow(1);
+		List<Issuer> issuers = com.invest.app.data_extract.repository.Operator.getIssuersOnCertainLevelNow(1);
 		
 		return issuers;
 	}
