@@ -1,0 +1,26 @@
+[
+    {
+        "secId": "GAZP",
+        "fullName": "Газпром ао"
+    },
+    {
+        "secId": "YNDX",
+        "fullName": "Yandex clA"
+    },
+    {
+        "secId": "SBER",
+        "fullName": "Сбербанк"
+    },
+    {
+        "secId": "LKOH",
+        "fullName": "Белуга ао"
+    },
+    {
+        "secId": "MTSS",
+        "fullName": "МТС-ао"
+    },
+    {
+        "secId": "TCSG",
+        "fullName": "TCS-гдр"
+    }
+]

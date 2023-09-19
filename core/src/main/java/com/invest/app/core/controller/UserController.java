@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.invest.app.data_extract.entities.Issuer;
+import com.invest.app.data_extract.entities.IssuerMetadata;
 import com.invest.app.user_operator.model.User;
 import com.invest.app.user_operator.repository.UserService;
 import com.invest.app.user_operator.repository.UserRepository;
@@ -52,5 +54,11 @@ public class UserController {
 	public void  deleteUser(@RequestParam Long id) {
 		
 		service.deleteUser(id);
+	}
+	
+	@PostMapping("/mark")
+	public void bookmarkIssuer(@RequestParam String userName, @RequestParam String secId) {
+		
+		service.saveIssuerToUser(userName, secId);
 	}
 }
