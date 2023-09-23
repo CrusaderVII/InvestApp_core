@@ -35,6 +35,13 @@ public class IssuerController {
 		return issuerForLastMonth;
 	}
 	
+	@GetMapping("/last-week")
+	public List<Issuer> getIssuerForLastWeek(@RequestParam String secId) {
+		List<Issuer> issuerForLastWeekIssuers = Operator.getIssuerForLastWeek(secId);
+		
+		return issuerForLastWeekIssuers;
+	}
+	
 	@GetMapping("/main/now")
 	public List<Issuer> getMainIssuersNow() {
 		List<Issuer> issuers = com.invest.app.core.repository.Operator.getMainIssuersNow();
