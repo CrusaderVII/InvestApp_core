@@ -19,7 +19,7 @@ public class Operator {
 
 	
 	public static List<IssuerMetadata> getIssuersMetadataOnCertainLevel(int level) {
-		BufferedReader br = RequestConstructor.getPlainJson(RequestConstructor.getIssuersMetadataOnCertainLevelRequest(level));
+		BufferedReader br = UserRequestConstructor.getPlainJson(UserRequestConstructor.getIssuersMetadataOnCertainLevelRequest(level));
 		List<IssuerMetadata> issuersMetadata;
 		
 		String jsonString = readJson(br);
@@ -41,8 +41,8 @@ public class Operator {
 		List<IssuerMetadata> issuersMetadata = Operator.getIssuersMetadataOnCertainLevel(level);
 		List<Issuer> issuers;
 		
-		BufferedReader br = RequestConstructor.getPlainJsonWithBody(issuersMetadata, 
-				RequestConstructor.getIssuersOnCertainLevelNow());
+		BufferedReader br = UserRequestConstructor.getPlainJsonWithBody(issuersMetadata, 
+				UserRequestConstructor.getIssuersOnCertainLevelNow());
 		
 		String jsonString = readJson(br);
 		
