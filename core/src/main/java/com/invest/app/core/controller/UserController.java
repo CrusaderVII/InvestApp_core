@@ -51,8 +51,9 @@ public class UserController {
 	
 	@PostMapping("/save")
 	public User saveUser(@RequestBody User user) {
+		User response = UserRequestConstructor.postUserResponse(user);
 		
-		return service.saveUser(user);
+		return response;
 	}
 	 
 	@DeleteMapping("/delete") 

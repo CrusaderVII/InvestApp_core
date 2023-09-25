@@ -2,7 +2,8 @@ package com.invest.app.core.repository.request.user;
 
 public enum UserPostfix {
 	
-	AUTH_POSTFIX("/");
+	AUTH_POSTFIX("/"),
+	REGISTER_POSTFIX("/save");
 
 	private final String value;
 	

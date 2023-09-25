@@ -21,6 +21,11 @@ public class UserRequestConstructor {
 		return DEFAULT_USER_PREFIX.value() + UserPostfix.AUTH_POSTFIX.value() + "?email="+email+"&password="+password;
 	}
 	
+	public static String saveUserRequest() {
+		return DEFAULT_USER_PREFIX.value() + UserPostfix.REGISTER_POSTFIX.value();
+		
+	}
+	
 	public static String getIssuersMetadataOnCertainLevelRequest(int level) {
 		return DataPrefix.MAIN_PREFIX.value() + DataPostfix.GET_ISSUERS_ON_LEVEL.value() + level;
 	}
@@ -34,6 +39,14 @@ public class UserRequestConstructor {
 		
 		ResponseEntity<User> responseEntity = template.getForEntity(request, User.class);
 				
+		return responseEntity.getBody();
+	}
+	
+	public static User postUserResponse(User user) {
+		RestTemplate template = new RestTemplate();
+		
+		ResponseEntity<User> responseEntity = template.postForEntity(saveUserRequest(), user, User.class);
+		
 		return responseEntity.getBody();
 	}
 
