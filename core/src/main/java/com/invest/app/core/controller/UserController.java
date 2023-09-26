@@ -1,9 +1,9 @@
 package com.invest.app.core.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,15 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import com.invest.app.core.repository.UserRequestConstructor;
-import com.invest.app.data_extract.entities.Issuer;
 import com.invest.app.data_extract.entities.IssuerMetadata;
-import com.invest.app.user_operator.model.IssuerData;
 import com.invest.app.user_operator.model.User;
 import com.invest.app.user_operator.repository.UserService;
-import com.invest.app.user_operator.repository.UserRepository;
+
+import static com.invest.app.core.repository.UserRequestConstructor.getResponse;
 
 @CrossOrigin(originPatterns = "http://localhost:4200/")
 @RequestMapping("/investapp.com/user")
@@ -32,15 +30,10 @@ public class UserController {
 	
 	@GetMapping("/")
 	public User getUserByEmailAndPassword(@RequestParam String email, @RequestParam String password) {
-		User user = UserRequestConstructor.getUserResponse(UserRequestConstructor.getUserAuthRequest(password, email));
+		User user = new User();
+		user = getResponse(UserRequestConstructor.getUserAuthRequest(password, email), user.getClass());
 		
 		return user;
-	}
-	
-	@GetMapping("/id")
-	public User getUserById(@RequestParam Long id) {
-		
-		return service.getUserById(id);
 	}
 	
 	@GetMapping("/all") 
@@ -51,33 +44,30 @@ public class UserController {
 	
 	@PostMapping("/save")
 	public User saveUser(@RequestBody User user) {
-		User response = UserRequestConstructor.postUserResponse(user);
+		User response = UserRequestConstructor.postResponse(user);
 		
 		return response;
 	}
-	 
-	@DeleteMapping("/delete") 
-	public void  deleteUser(@RequestParam Long id) {
-		
-		service.deleteUser(id);
-	}
 	
 	@GetMapping("issuers/mark")
-	public void bookmarkIssuer(@RequestParam String userName, @RequestParam String secId) {
+	public IssuerMetadata bookmarkIssuer(@RequestParam String userName, @RequestParam String secId) {
+		IssuerMetadata metadata = new IssuerMetadata();
+		metadata = getResponse(UserRequestConstructor.bookmarkIssuerRequest(userName, secId), metadata.getClass());
 		
-		service.saveIssuerToUser(userName, secId);
+		return metadata;
 	}
 	
 	@GetMapping("issuers")
-	public List<IssuerData> getBookmarkedIssuers(@RequestParam String userName) {
-		User user = service.getUserByName(userName);
+	public List<IssuerMetadata> getBookmarkedIssuers(@RequestParam String userName) {
+		List<IssuerMetadata> metadata = new ArrayList<>();
+		metadata = getResponse(UserRequestConstructor.getUsersBookmarksRequest(userName), metadata.getClass());
 		
-		return user.getIssuersDatas();
+		return metadata;
 	}
 	
 	@DeleteMapping("/issuers/delete")
 	public void deleteIssuersFromBookmarks(@RequestParam String userName, @RequestParam String secId) {
 
-		service.deleteIssuerFromUser(userName, secId);
+		UserRequestConstructor.deleteResponse(userName, secId);
 	}
 }
