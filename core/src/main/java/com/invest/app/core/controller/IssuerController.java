@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.invest.app.core.repository.DataRequestConstructor;
 import com.invest.app.data_extract.entities.Issuer;
 import com.invest.app.data_extract.entities.IssuerMetadata;
-import com.invest.app.data_extract.repository.Operator;
+
+import static com.invest.app.core.repository.DataRequestConstructor.getResponse;
 
 @CrossOrigin(originPatterns = "http://localhost:4200/")
 @RequestMapping("/investapp.com/issuer")
@@ -23,23 +24,11 @@ public class IssuerController {
 	
 	@GetMapping("/now")
 	public Issuer getIssuerNow(@RequestParam String secId) {
-		Issuer issuer = Operator.getIssuerNowWithPercent(secId);
+		Issuer issuer = new Issuer();
+		
+		issuer = getResponse(DataRequestConstructor.getIssuerNowRequest(secId), issuer.getClass());
 		
 		return issuer;
-	}
-	
-	@GetMapping("/last-month")
-	public List<Issuer> getIssuerForLastMonth(@RequestParam String secId) {
-		List<Issuer> issuerForLastMonth = Operator.getIssuerForLastMonth(secId);
-		
-		return issuerForLastMonth;
-	}
-	
-	@GetMapping("/last-week")
-	public List<Issuer> getIssuerForLastWeek(@RequestParam String secId) {
-		List<Issuer> issuerForLastWeekIssuers = Operator.getIssuerForLastWeek(secId);
-		
-		return issuerForLastWeekIssuers;
 	}
 	
 	@GetMapping("/main/now")
@@ -49,12 +38,27 @@ public class IssuerController {
 		return issuers;
 	}
 	
-	@PostMapping("/certain")
-	public List<Issuer> getIssuersOnCertainLevelNow(@RequestBody List<IssuerMetadata> list) {
-		List<Issuer> issuersNow = list.stream()
-				.map(issuerMetadata -> Operator.getIssuerNowWithPercent(issuerMetadata.getSecId()))
-				.toList();
+	@GetMapping("/last-month")
+	public List<Issuer> getIssuerForLastMonth(@RequestParam String secId) {
+		List<Issuer> issuerForLastMonth = new ArrayList<>();
 		
-		return issuersNow;
+		issuerForLastMonth = getResponse(DataRequestConstructor.getIssuerForLastMonthRequest(secId), issuerForLastMonth.getClass());
+		
+		return issuerForLastMonth;
+	}
+	
+	@GetMapping("/last-week")
+	public List<Issuer> getIssuerForLastWeek(@RequestParam String secId) {
+		List<Issuer> issuerForLastWeek = new ArrayList<>();
+		
+		issuerForLastWeek = getResponse(DataRequestConstructor.getIssuerForLastWeekRequest(secId), issuerForLastWeek.getClass());
+		
+		return issuerForLastWeek;
+	}
+	
+	@PostMapping("/certain")
+	public List<Issuer> getCertainIssuersNow(@RequestBody List<IssuerMetadata> list) {
+		
+		return DataRequestConstructor.postResponse(list);
 	}
 }

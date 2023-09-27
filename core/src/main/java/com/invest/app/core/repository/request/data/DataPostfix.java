@@ -1,10 +1,20 @@
 package com.invest.app.core.repository.request.data;
 
 public enum DataPostfix {
-
-	GET_CERTAIN_ISSUERS ("/level/issuers"),
 	
-	GET_ISSUERS_ON_LEVEL ("/issuers/level?level=");
+	GET_ISSUERS_ON_LEVEL ("/issuers/level?level="),
+	
+	STOCK_POSTFIX("/stock"),
+	
+	STOCK_PAGES_POSTFIX("/stock/pages"),
+	
+	ISSUER("/issuer"),
+	
+	LAST_WEEK("/last/week"),
+	
+	LAST_MONTH("/last/month"),
+	
+	CERTAIN_ISSUERS("/issuers/certain");
 	
 	private final String value;
 	

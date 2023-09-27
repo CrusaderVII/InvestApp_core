@@ -2,9 +2,11 @@ package com.invest.app.core.repository.request.data;
 
 public enum DataPrefix {
 
-	NOW_PREFIX ("http://localhost:8080/now"),
+	NOW_DATA_PREFIX ("http://localhost:8080/api/data/now"),
 	
-	MAIN_PREFIX ("http://localhost:8080/");
+	HISTORY_DATA_PREFIX("http://localhost:8080/api/data/history"),
+	
+	DEFAULT_DATA_PREFIX ("http://localhost:8080/api/data");
 	
 	private final String value;
 	
