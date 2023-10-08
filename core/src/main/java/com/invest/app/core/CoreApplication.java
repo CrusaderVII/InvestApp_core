@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import com.invest.app.user_operator.repository.UserRepository;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.invest.app", "com.invest.app.user_operator"})
+@ComponentScan(basePackages = {"com.invest.app.core", "com.invest.app.user_operator", "com.invest.app.data_extract"})
 public class CoreApplication {
 	
 	public static void main(String[] args) {
