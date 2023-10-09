@@ -1,0 +1,16 @@
+version: '3'
+services:
+  microservice:
+    build: Users\egorc\git\user_operator_API\user-operator
+    depends_on:
+      - postgres
+    # Other configuration for your microservice
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: InvestApp
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Crusader73
+    ports:
+      - "5433:5432"
