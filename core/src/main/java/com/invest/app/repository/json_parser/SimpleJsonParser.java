@@ -1,19 +1,15 @@
-package com.invest.app.core.json_parser;
+package com.invest.app.repository.json_parser;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.objenesis.instantiator.basic.NewInstanceInstantiator;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.JsonObject;
+
 import com.invest.app.data_extract.entities.Issuer;
 import com.invest.app.data_extract.entities.IssuerMetadata;
-import com.invest.app.data_extract.entities.TimePeriod;
-
 public class SimpleJsonParser {
 	public static ObjectMapper mapper = getObjectMapper();
 	

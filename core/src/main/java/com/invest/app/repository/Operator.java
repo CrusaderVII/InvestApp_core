@@ -1,20 +1,18 @@
-package com.invest.app.core.repository;
+package com.invest.app.repository;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
+import com.invest.app.repository.json_parser.SimpleJsonParser;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
-import com.invest.app.core.json_parser.SimpleJsonParser;
 import com.invest.app.data_extract.entities.Issuer;
 import com.invest.app.data_extract.entities.IssuerMetadata;
-
 public class Operator {
 
 	
@@ -55,7 +53,7 @@ public class Operator {
 		return issuers;
 	}
 	
-	public static List<Issuer> getMainIssuersNow() {
+	public static List<com.invest.app.data_extract.entities.Issuer> getMainIssuersNow() {
 		List<IssuerMetadata> metadata;
 		Resource issuers = new ClassPathResource("static/Main_issuers.txt"); 
 		File file = null;

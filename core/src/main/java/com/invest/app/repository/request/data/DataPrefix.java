@@ -1,4 +1,4 @@
-package com.invest.app.core.repository.request.data;
+package com.invest.app.repository.request.data;
 
 public enum DataPrefix {
 

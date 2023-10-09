@@ -1,4 +1,4 @@
-package com.invest.app.core.controller;
+package com.invest.app.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.invest.app.core.repository.DataRequestConstructor;
+import com.invest.app.repository.DataRequestConstructor;
 import com.invest.app.data_extract.entities.Issuer;
 import com.invest.app.data_extract.entities.IssuerMetadata;
 import com.invest.app.data_extract.entities.PageMetadata;
 import com.invest.app.data_extract.repository.Operator;
 
-import static com.invest.app.core.repository.DataRequestConstructor.getResponse;
+import static com.invest.app.repository.DataRequestConstructor.getResponse;
 
 @CrossOrigin(originPatterns = "http://localhost:4200/")
 @RestController

@@ -1,8 +1,9 @@
-package com.invest.app.core.controller;
+package com.invest.app.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.invest.app.repository.Operator;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.invest.app.core.repository.DataRequestConstructor;
+import com.invest.app.repository.DataRequestConstructor;
 import com.invest.app.data_extract.entities.Issuer;
 import com.invest.app.data_extract.entities.IssuerMetadata;
 
-import static com.invest.app.core.repository.DataRequestConstructor.getResponse;
+import static com.invest.app.repository.DataRequestConstructor.getResponse;
 
 @CrossOrigin(originPatterns = "http://localhost:4200/")
 @RequestMapping("/investapp.com/issuer")
@@ -33,14 +34,14 @@ public class IssuerController {
 	
 	@GetMapping("/main/now")
 	public List<Issuer> getMainIssuersNow() {
-		List<Issuer> issuers = com.invest.app.core.repository.Operator.getMainIssuersNow();
+		List<Issuer> issuers = Operator.getMainIssuersNow();
 		
 		return issuers;
 	}
 	
 	@GetMapping("/last-month")
 	public List<Issuer> getIssuerForLastMonth(@RequestParam String secId) {
-		List<Issuer> issuerForLastMonth = new ArrayList<>();
+		List<Issuer> issuerForLastMonth = new ArrayList<Issuer>();
 		
 		issuerForLastMonth = getResponse(DataRequestConstructor.getIssuerForLastMonthRequest(secId), issuerForLastMonth.getClass());
 		

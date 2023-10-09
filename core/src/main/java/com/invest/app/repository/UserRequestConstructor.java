@@ -1,22 +1,13 @@
-package com.invest.app.core.repository;
+package com.invest.app.repository;
 
-import java.io.BufferedReader;
-import java.io.StringReader;
-import java.util.List;
-
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import com.invest.app.core.repository.request.data.DataPostfix;
-import com.invest.app.core.repository.request.data.DataPrefix;
-import com.invest.app.core.repository.request.user.UserPostfix;
-import com.invest.app.core.repository.request.user.UserPrefix;
+import com.invest.app.repository.request.user.UserPostfix;
 import com.invest.app.data_extract.entities.IssuerMetadata;
 import com.invest.app.user_operator.model.User;
 
-import static com.invest.app.core.repository.request.user.UserPrefix.DEFAULT_USER_PREFIX;
+import static com.invest.app.repository.request.user.UserPrefix.DEFAULT_USER_PREFIX;
 
 public class UserRequestConstructor {
 	
