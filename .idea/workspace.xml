@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5479c3f4-3a5c-42d7-a32d-77a18f88fcbf" name="Changes" comment="Fixed previous committing bug)">
+      <change beforePath="$PROJECT_DIR$/InvestApp_data_extracting_API/data_extract/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/InvestApp_data_extracting_API/data_extract/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InvestApp_user_operator_API" beforeDir="false" afterPath="$PROJECT_DIR$/InvestApp_user_operator_API" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/invest/app/CoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/invest/app/CoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/invest/app/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/invest/app/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/invest/app/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/invest/app/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-operator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-operator/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="26c6ea77-fdab-4d87-bd74-f52ee12723b1" />
+        <option name="url" value="https://github.com/CrusaderVII/InvestApp_data_extracting_API.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2WUOkCxveVzM4xRdNI0HEs65AER" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;ALL&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/egorc/Neural Networks/InvestApp_user_operator_API/user-operator&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/egorc/Neural Networks/InvestApp_core/InvestApp_user_operator_API&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\egorc\Neural Networks\InvestApp_core\core" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.invest.app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.com.invest.app.CoreApplication">
+    <configuration name="CoreApplication" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.invest.app.CoreApplication" />
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.invest.app.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataExtractApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.invest.app.data_extract.DataExtractApplication" />
+      <module name="data_extract" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.invest.app.data_extract.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserOperatorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.invest.app.user_operator.UserOperatorApplication" />
+      <module name="user-operator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.invest.app.user_operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.invest.app.CoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.invest.app.CoreApplication" />
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.invest.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in user-operator" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="user-operator" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.com.invest.app.CoreApplication" />
+      <item itemvalue="Application.UserOperatorApplication" />
+      <item itemvalue="Application.CoreApplication" />
+      <item itemvalue="Application.DataExtractApplication" />
+      <item itemvalue="JUnit.All in user-operator" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.com.invest.app.CoreApplication" />
+        <item itemvalue="Application.CoreApplication" />
+        <item itemvalue="Application.UserOperatorApplication" />
+        <item itemvalue="Application.DataExtractApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5479c3f4-3a5c-42d7-a32d-77a18f88fcbf" name="Changes" comment="" />
+      <created>1696783833224</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696783833224</updated>
+    </task>
+    <task id="LOCAL-00001" summary="I added some refactories, so that now it is used as a module in core service.">
+      <created>1696874918101</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696874918101</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Now it is a main service that uses data-extract and user-operator as modules.">
+      <created>1696875022760</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696875022760</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Now it is a module used by core service.">
+      <created>1696875179222</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696875179222</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Now it is a module used by core service.">
+      <created>1696877143213</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696877143213</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed previous committing bug)">
+      <created>1696877752811</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696877752811</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed previous committing bug)">
+      <created>1696878511544</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696878511544</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="I added some refactories, so that now it is a ready-to-use microservice." />
+    <MESSAGE value="I added some refactories, so that now it is used as a module in core service." />
+    <MESSAGE value="Now it is a main service that uses data-extract and user-operator as modules." />
+    <MESSAGE value="Now it is a module used by core service." />
+    <MESSAGE value="Fixed previous committing bug)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed previous committing bug)" />
+  </component>
+</project>

@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.invest.app.repository.DataRequestConstructor;
 import com.invest.app.data_extract.entities.Issuer;
-import com.invest.app.data_extract.entities.IssuerMetadata;
 import com.invest.app.data_extract.entities.PageMetadata;
-import com.invest.app.data_extract.repository.Operator;
 
 import static com.invest.app.repository.DataRequestConstructor.getResponse;
 

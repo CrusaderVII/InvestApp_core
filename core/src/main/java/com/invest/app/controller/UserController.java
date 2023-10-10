@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.invest.app.repository.UserRequestConstructor;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.invest.app.user_operator.model.User;
-import com.invest.app.user_operator.repository.UserService;
 import com.invest.app.user_operator.model.IssuerMetadata;
 
 @CrossOrigin(originPatterns = "http://localhost:4200/")
@@ -31,13 +29,7 @@ public class UserController {
 		
 		return user;
 	}
-	
-//	@GetMapping("/all")
-//	public List<User> getAllUsers () {
-//
-//		return service.getAllUsers();
-//	}
-//
+
 	@PostMapping("/save")
 	public User saveUser(@RequestBody User user) {
 		User response = UserRequestConstructor.postResponse(user);

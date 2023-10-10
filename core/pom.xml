@@ -20,7 +20,7 @@
 	</properties>
 	<modules>
 		<module>../InvestApp_data_extracting_API/data_extract</module>
-		<module>../user-operator</module>
+
 	</modules>
 	<dependencyManagement>
 		<dependencies>
@@ -56,6 +56,17 @@
 			<artifactId>user-operator</artifactId>
 			<version>0.0.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
